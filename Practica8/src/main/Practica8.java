@@ -19,7 +19,19 @@ public class Practica8 {
 				numbers= datosUsuario(numero);
 				System.out.printf("La suma de los numeros es %d\n",sumar(numbers));
 			
+			}if(menu==4) {
+				
+				System.out.println("Introduce los dos números enteros que quieres dividir(será n1/n2):");
+				number1=keyboard.nextInt();number2=keyboard.nextInt();
+				
+					System.out.printf("La división de %d y %d es igual a %d\n",number1,number2,divide(number1,number2));
+			}if(menu==5) {
+				System.out.println("Introduce dos números enteros, el primero la base y el segundo el exponente: ");
+				number1=keyboard.nextInt();number2=keyboard.nextInt();
+				
+				System.out.printf("El número %d elevado a %d es igual a %d\n",number1,number2,Pow(number1,number2));
 			}
+
 			
 			//Y Asi sucesivamente 
 
