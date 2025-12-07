@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Practica8 {
 	Scanner keyboard = new Scanner(System.in);
 	public void show() {
-		int menu,numero;
+		int menu,numero,number1,number2;
 		int[]numbers;
 		System.out.printf("-----Bienvenid@s al intento numero uno de la calculadora----");
 		do {
@@ -20,6 +20,7 @@ public class Practica8 {
 				System.out.printf("La suma de los numeros es %d\n",sumar(numbers));
 			
 			}
+			
 			//Y Asi sucesivamente 
 
 		}while(menu!=6); 
@@ -44,6 +45,12 @@ public class Practica8 {
 		}
 		return result;
 	}
+	public int divide(int n1,int n2) {
+		int result;
+		result=n1/n2;
+		return result;
+	}
+
 	
 	
 	public static void main(String[] args) {
