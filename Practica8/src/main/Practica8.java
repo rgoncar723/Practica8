@@ -50,7 +50,11 @@ public class Practica8 {
 		result=n1/n2;
 		return result;
 	}
-
+	public int Pow(int n1,int n2) {
+		int result;
+		result=(int)Math.pow(n1, n2);
+		return result;
+	}
 	
 	
 	public static void main(String[] args) {
