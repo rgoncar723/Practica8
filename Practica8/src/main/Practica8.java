@@ -26,6 +26,16 @@ public class Practica8 {
 				numero=keyboard.nextInt();
 				numbers= datosUsuario(numero);
 				System.out.printf("La resta de los numeros es %d\n",restar(numbers));
+			//Opción 3 --> Multiplicar	
+			}else if(menu==3) {
+				//Esto seguramente se pueda poner como una funcion
+				System.out.println("Por favor escriba la cantidad de numeros que desea operar");
+				numero=keyboard.nextInt();
+				numbers= datosUsuario(numero);
+				System.out.printf("La multiplicación de los numeros es %d\n",multiplicar(numbers));
+				
+			}
+			
 			
 			//Y Asi sucesivamente 
 
@@ -55,6 +65,13 @@ public class Practica8 {
 		int result=numbers[0];
 		for (int i = 1; i < numbers.length; i++) {
 			result -= numbers[i];
+		}
+		return result;
+	}
+	public int multiplicar(int...numbers) {
+		int result=numbers[0];
+		for (int i = 1; i < numbers.length; i++) {
+			result = result * numbers[i];
 		}
 		return result;
 	}
