@@ -45,6 +45,7 @@ public class Practica8 {
 
 		}while(menu!=6); 
 		System.out.println(" Saliendo del programa");
+		System.out.println("Gracias por usar nuestro intento de calculadora");
 		
 	}
 	
