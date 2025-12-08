@@ -24,18 +24,23 @@ public class Practica8 {
 				System.out.println("Por favor escriba la cantidad de numeros que desea operar");
 				numero=keyboard.nextInt();
 				numbers= datosUsuario(numero);
-				System.out.printf("La resta de los numeros es %d\n",restar(numbers));
+				System.out.printf("\nLa resta de los numeros es %d\n",restar(numbers));
 			}
 			if(menu==3) {
 				System.out.println("Por favor escriba la cantidad de numeros que desea operar");
 				numero=keyboard.nextInt();
 				numbers= datosUsuario(numero);
-				System.out.printf("La multiplicación de los numeros es %d\n",multiplicar(numbers));
+				System.out.printf("\nLa multiplicación de los numeros es %d\n",multiplicar(numbers));
 			}
 			if(menu==4) {
 				System.out.println("Por favor escriba los dos numeros que desea operar");
 				numa=keyboard.nextInt();numb=keyboard.nextInt();	
-				System.out.printf("La division de %d y de %d es %d",numa,numb,dividir(numa,numb));
+				System.out.printf("\nLa división de %d y de %d es %d",numa,numb,dividir(numa,numb));
+			}
+			if(menu==5) {
+				System.out.println("Por favor escriba los dos numeros que desea operar");
+				numa=keyboard.nextInt();numb=keyboard.nextInt();	
+				System.out.printf("\nLa potencia de %d y de %d es %d",numa,numb,potencia(numa,numb));
 			}
 
 		}while(menu!=6); 
@@ -58,6 +63,30 @@ public class Practica8 {
 		for (int i = 0; i < numbers.length; i++) {
 			result += numbers[i];
 		}
+		return result;
+	}
+	public int restar(int...numbers) {
+		int result=numbers[0];
+		for(int i=1;i<numbers.length;i++) {
+			result-=numbers[i];
+		}
+		return result;
+	}
+	public int multiplicar(int...numbers) {
+		int result=numbers[0];
+		for(int i=0;i<numbers.length;i++) {
+			result *= numbers[i];
+		}
+		return result;
+	}
+	public int dividir(int numa, int numb) {
+		int result;
+		result=(numa/numb);
+		return result;
+	}
+	public int potencia(int numa, int numb) {
+		int result;
+		result=(int) Math.pow(numa, numb);
 		return result;
 	}
 	public static void main(String[] args) {
