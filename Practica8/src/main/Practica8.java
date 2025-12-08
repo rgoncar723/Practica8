@@ -9,11 +9,9 @@ public class Practica8 {
 		int[]numbers;
 		System.out.printf("-----Bienvenid@s al intento numero uno de la calculadora----");
 		do {
-			//Ver si esto puede ponerse como funcion aparte 
 			System.out.printf("\n Menu: \n 1.Sumar \n 2. Restar \n 3. Multiplicar \n 4. Dividir dos numeros \n 5. Potencia de dos numeros\n 6. Salir del programa \n Por favor escribe el numero de la operacion que desea realizar: ");
 			menu = keyboard.nextInt();
 			if(menu==1) {
-				//Esto seguramente se pueda poner como una funcion
 				System.out.println("Por favor escriba la cantidad de numeros que desea operar");
 				numero=keyboard.nextInt();
 				numbers= datosUsuario(numero);
