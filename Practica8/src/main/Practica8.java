@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Practica8 {
 	Scanner keyboard = new Scanner(System.in);
 	public void show() {
-		int menu,numero;
+		int menu,numero,numa,numb;
 		int[]numbers;
 		System.out.printf("-----Bienvenid@s al intento numero uno de la calculadora----");
 		do {
@@ -20,7 +20,23 @@ public class Practica8 {
 				System.out.printf("La suma de los numeros es %d\n",sumar(numbers));
 			
 			}
-			//Y Asi sucesivamente 
+			if(menu==2) {
+				System.out.println("Por favor escriba la cantidad de numeros que desea operar");
+				numero=keyboard.nextInt();
+				numbers= datosUsuario(numero);
+				System.out.printf("La resta de los numeros es %d\n",restar(numbers));
+			}
+			if(menu==3) {
+				System.out.println("Por favor escriba la cantidad de numeros que desea operar");
+				numero=keyboard.nextInt();
+				numbers= datosUsuario(numero);
+				System.out.printf("La multiplicación de los numeros es %d\n",multiplicar(numbers));
+			}
+			if(menu==4) {
+				System.out.println("Por favor escriba los dos numeros que desea operar");
+				numa=keyboard.nextInt();numb=keyboard.nextInt();	
+				System.out.printf("La division de %d y de %d es %d",numa,numb,dividir(numa,numb));
+			}
 
 		}while(menu!=6); 
 		System.out.println(" Saliendo del programa");
@@ -44,8 +60,6 @@ public class Practica8 {
 		}
 		return result;
 	}
-	
-	
 	public static void main(String[] args) {
 		new Practica8().show();
 
