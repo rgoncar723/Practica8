@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Practica8 {
 	Scanner keyboard = new Scanner(System.in);
 	public void show() {
-		int menu,numero,numa,numb;
+		int menu,numero,number1,number2;
 		int[]numbers;
 		System.out.printf("-----Bienvenid@s al intento numero uno de la calculadora----");
 		do {
@@ -18,27 +18,17 @@ public class Practica8 {
 				System.out.printf("La suma de los numeros es %d\n",sumar(numbers));
 			
 			}
-			if(menu==2) {
-				System.out.println("Por favor escriba la cantidad de numeros que desea operar");
-				numero=keyboard.nextInt();
-				numbers= datosUsuario(numero);
-				System.out.printf("\nLa resta de los numeros es %d\n",restar(numbers));
-			}
-			if(menu==3) {
-				System.out.println("Por favor escriba la cantidad de numeros que desea operar");
-				numero=keyboard.nextInt();
-				numbers= datosUsuario(numero);
-				System.out.printf("\nLa multiplicación de los numeros es %d\n",multiplicar(numbers));
-			}
 			if(menu==4) {
-				System.out.println("Por favor escriba los dos numeros que desea operar");
-				numa=keyboard.nextInt();numb=keyboard.nextInt();	
-				System.out.printf("\nLa división de %d y de %d es %d",numa,numb,dividir(numa,numb));
-			}
-			if(menu==5) {
-				System.out.println("Por favor escriba los dos numeros que desea operar");
-				numa=keyboard.nextInt();numb=keyboard.nextInt();	
-				System.out.printf("\nLa potencia de %d y de %d es %d",numa,numb,potencia(numa,numb));
+				
+				System.out.println("Introduce los dos números enteros que quieres dividir(será n1/n2):");
+				number1=keyboard.nextInt();number2=keyboard.nextInt();
+				
+					System.out.printf("La división de %d y %d es igual a %d\n",number1,number2,divide(number1,number2));
+			}if(menu==5) {
+				System.out.println("Introduce dos números enteros, el primero la base y el segundo el exponente: ");
+				number1=keyboard.nextInt();number2=keyboard.nextInt();
+				
+				System.out.printf("El número %d elevado a %d es igual a %d\n",number1,number2,Pow(number1,number2));
 			}
 
 		}while(menu!=6); 
@@ -78,16 +68,19 @@ public class Practica8 {
 		}
 		return result;
 	}
-	public int dividir(int numa, int numb) {
+
+	public int divide(int n1,int n2) {
 		int result;
-		result=(numa/numb);
+		result=n1/n2;
 		return result;
 	}
-	public int potencia(int numa, int numb) {
+	public int Pow(int n1,int n2) {
 		int result;
-		result=(int) Math.pow(numa, numb);
+		result=(int)Math.pow(n1, n2);
 		return result;
 	}
+	
+	
 	public static void main(String[] args) {
 		new Practica8().show();
 
